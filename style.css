@@ -130,11 +130,45 @@ table {
 /* End CSS Resset */
 
 /* Style */
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(180, 78, 232);
+  height: 40px;
+  align-items: center;
+}
+.logo {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+  color: rgb(234, 192, 255);
+}
+nav {
+  width: 40%;
+  font-family: "Montserrat", sans-serif;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: rgb(234, 192, 255);
+}
+nav ul li a:hover {
+  color: aliceblue;
+}
 
 /* Responsive */
-@media screen and (max-width: 576) {
+@media screen and (max-width: 576px) {
+  nav {
+    display: none;
+  }
 }
-@media screen and (max-width: 768) {
+@media screen and (max-width: 768px) {
+  nav {
+    width: 50%;
+  }
 }
 
 /* Clear Fix */
