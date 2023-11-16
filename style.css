@@ -167,12 +167,22 @@ nav ul li a:hover {
   align-items: end;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
 }
 .menu-togle span {
   width: 20px;
   height: 3px;
   background-color: rgb(234, 192, 255);
   border-radius: 3px;
+}
+.menu-togle input {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 20px;
+  opacity: 0.5;
+  right: -23px;
+  top: -5.5px;
 }
 /* Responsive */
 @media screen and (max-width: 576px) {
