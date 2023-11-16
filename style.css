@@ -159,9 +159,29 @@ nav ul li a:hover {
   color: aliceblue;
 }
 
+/* Hamburger Menu */
+.menu-togle {
+  display: flex;
+  width: 40%;
+  height: 15px;
+  align-items: end;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.menu-togle span {
+  width: 20px;
+  height: 3px;
+  background-color: rgb(234, 192, 255);
+  border-radius: 3px;
+}
 /* Responsive */
 @media screen and (max-width: 576px) {
   nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) {
+  .menu-togle {
     display: none;
   }
 }
