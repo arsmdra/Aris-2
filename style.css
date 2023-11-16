@@ -174,15 +174,36 @@ nav ul li a:hover {
   height: 3px;
   background-color: rgb(234, 192, 255);
   border-radius: 3px;
+  transition: all 0.2s;
 }
 .menu-togle input {
   position: absolute;
   display: block;
   width: 60px;
   height: 20px;
-  opacity: 0.5;
+  opacity: 0;
   right: -23px;
   top: -5.5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Animation Hamburger Menu */
+.menu-togle span:nth-child(2) {
+  transform-origin: 0;
+}
+.menu-togle span:nth-child(4) {
+  transform-origin: 0;
+}
+
+.menu-togle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1.5px, -0.5px);
+}
+.menu-togle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-0.5px, 0px);
+}
+.menu-togle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
 }
 /* Responsive */
 @media screen and (max-width: 576px) {
