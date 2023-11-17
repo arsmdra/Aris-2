@@ -130,6 +130,9 @@ table {
 /* End CSS Resset */
 
 /* Style */
+body {
+  overflow-x: hidden;
+}
 header {
   display: flex;
   justify-content: space-around;
@@ -197,18 +200,38 @@ nav ul li a:hover {
 }
 
 .menu-togle input:checked ~ span:nth-child(2) {
+  background-color: rgb(255, 255, 255);
   transform: rotate(45deg) translate(-1.5px, -0.5px);
 }
 .menu-togle input:checked ~ span:nth-child(4) {
+  background-color: rgb(255, 255, 255);
   transform: rotate(-45deg) translate(-0.5px, 0px);
 }
 .menu-togle input:checked ~ span:nth-child(3) {
+  opacity: 0;
   transform: scale(0);
 }
+
 /* Responsive */
 @media screen and (max-width: 576px) {
   nav {
-    display: none;
+    position: absolute;
+    background-color: rgb(180, 78, 232);
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    padding-top: 8vh;
+    transform: translateX(100%);
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* class tambahan untuk slider navigasi */
+  .slide {
+    transition: all 1.4s;
+    transform: translateX(0);
   }
 }
 @media screen and (min-width: 576px) {
