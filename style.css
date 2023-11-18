@@ -131,7 +131,7 @@ table {
 
 /* Style */
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 header {
   display: flex;
@@ -167,7 +167,6 @@ nav ul li a:hover {
   display: flex;
   width: 40%;
   height: 15px;
-  align-items: end;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
@@ -185,7 +184,7 @@ nav ul li a:hover {
   width: 60px;
   height: 20px;
   opacity: 0;
-  right: -23px;
+  left: -24px;
   top: -5.5px;
   cursor: pointer;
   z-index: 2;
@@ -218,15 +217,19 @@ nav ul li a:hover {
     position: absolute;
     background-color: rgb(180, 78, 232);
     top: 0;
-    right: 0;
+    left: 0;
     height: 100%;
+    max-width: 150px;
     z-index: -1;
     padding-top: 8vh;
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   nav ul {
     flex-direction: column;
-    align-items: center;
+    padding-left: 6vw;
+  }
+  nav ul li {
+    padding: 10px 0px;
   }
   /* class tambahan untuk slider navigasi */
   .slide {
